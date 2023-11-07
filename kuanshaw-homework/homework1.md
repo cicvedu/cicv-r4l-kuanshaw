@@ -81,7 +81,7 @@ apt install qemu-system-x86
 qemu-system-x86_64 --version
 ```
 
-
+![image-20231107214626226](image/homework1/image-20231107214626226.png)
 
 ## 拉取代码库
 
@@ -91,7 +91,7 @@ git clone git@github.com:cicvedu/cicv-r4l-kuanshaw.git
 
 
 
-## 配置 linux 文件夹
+### 配置 linux 文件夹
 
 ```
 cd cicv-r4l-kuanshaw/linux
@@ -106,6 +106,31 @@ rustup component add clippy
 ![image-20231107194046155](image/homework1/image-20231107194046155.png)
 
 ![image-20231107203420969](image/homework1/image-20231107203420969.png)
+
+
+
+### 配置 busybox
+
+```
+cd busybox-1.36.1/
+make menuconfig
+```
+
+\# 在Settings项中，将"Build static binary (no shared libs)"选中
+
+Settings
+
+​     ---> [*] Build static binary (no shared libs)
+
+![image-20231107211842359](image/homework1/image-20231107211842359.png)
+
+save and exit
+
+make 
+
+```
+make install -j8
+```
 
 
 
